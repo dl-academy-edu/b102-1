@@ -7,6 +7,24 @@ html {
   box-sizing: inherit;
 }
 
+body {
+  font-family: "Lato", "Arial", sans-serif;
+}
+
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
+}
+
+
+
 ul {
   list-style: none;
   padding: 0;
@@ -17,9 +35,9 @@ h2 {
   margin: 0;
   padding: 0;
 }
-body {
-  font-family: "Lato", "Arial", sans-serif;
-}
+
+
+
 
 .container {
   max-width: 1260px;
