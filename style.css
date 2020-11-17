@@ -260,9 +260,18 @@ button {
 
 /* MAP */
 .map {
+  position: relative;
+  min-height: 350px;
   padding: 40px 0 133px;
 }
+
+.map .container {
+ 
+}
+
 .map-wrapper {
+  position: relative;
+  z-index: 2;
   max-width: 380px;
   padding: 44px 50px 26px;
 

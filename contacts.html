@@ -7,7 +7,9 @@
   <title>Chem-Dry</title>
   <link rel="stylesheet" href="./normalize.css">
   <link rel="stylesheet" href="./style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./contacts.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Overpass&display=swap" rel="stylesheet">
 </head>
 
 <body class="overlay">
@@ -26,6 +28,66 @@
     <a class="header-link-contact btn" href="/contact">Contact Us</a>
   </header>
 
+
+  <section class="contact-form container">
+    <form action="" class="main-form">
+      <div class="main-form__inner-wr">
+        <label class="main-form__label-name">
+          Name
+          <input type="text" class="main-form__input-name input">
+        </label>
+
+        <label class="main-form__label-phone">
+          Phone
+          <input type="tel" class="main-form__input-phone input">
+        </label>
+
+      </div>
+      <label class="main-form__label-email">
+        E-mail
+        <input type="email" class="main-form__input-email input">
+      </label>
+
+
+      <fieldset class="main-form__payment">
+        <legend>Payment Methods</legend>
+
+        <input type="checkbox" id="cash" class="visuallyhidden">
+        <label for="cash">Cash</label>
+        <input type="checkbox" id="credit_card" class="visuallyhidden">
+        <label for="credit_card">Сredit Сard</label>
+        <input type="checkbox" id="receipt" class="visuallyhidden">
+        <label for="receipt">Receipt</label>
+      </fieldset>
+
+      <label class="main-form__city">
+        City of Birth
+        <input type="text" class="input">
+      </label>
+
+      <fieldset class="main-form__report">
+        <legend>
+          Do you need a report on the services provided?
+        </legend>
+        <input type="radio" id="yes" name="report" class="visuallyhidden">
+        <label for="yes">Yes</label>
+
+        <input type="radio" id="no" name="report" class="visuallyhidden">
+        <label for="no">No</label>
+
+      </fieldset>
+
+        <label class="main-form__message">
+          Message
+          <textarea name="" id="" class="input"></textarea>
+        </label>
+        <button class="btn">SUBMIT</button>
+      
+
+
+    </form>
+
+  </section>
   <section class="map">
     <div class="container">
       <div class="map-wrapper">
@@ -35,6 +97,7 @@
         <a class="btn btn-purple" href="">Learn more</a>
       </div>
     </div>
+    <div id="map"></div>
   </section>
 
   <footer class="footer">
@@ -90,7 +153,20 @@
 
   </footer>
 
+
+  <div id="floating-panel">
+    <input id="address" type="textbox" value="Sydney, NSW" />
+    <input id="submit" type="button" value="Geocode" />
+  </div>
+  
+
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap&libraries=&v=weekly"
+  defer></script>
   <script src="./script.js"></script>
+
 </body>
 
 </html>
