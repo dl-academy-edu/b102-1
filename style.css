@@ -1,3 +1,5 @@
+@import './header.css';
+
 html {
   box-sizing: border-box;
 }
@@ -43,7 +45,8 @@ h2 {
   max-width: 1260px;
   width: 100%;
   margin: 0 auto;
-  padding: 0 40px;
+  padding-right: 40px;
+  padding-left: 40px;
 }
 
 a {
@@ -70,46 +73,18 @@ button {
   transition: opacity 0.2s;
   cursor: pointer;
 }
+
 .btn-purple {
   background: #95459a;
 }
+
 .btn:hover {
   opacity: 0.7;
 }
 
 /* HEADER */
 
-.header {
-  display: flex;
-  align-items: center;
-  padding-top: 30px;
-  padding-bottom: 30px;
-}
 
-.header-phone {
-  margin-right: 24px;
-  margin-left: auto;
-  font-style: normal;
-  font-weight: 800;
-  font-size: 17px;
-  line-height: 20px;
-  color: #95459a;
-}
-
-.header-link-contact {
-  font-style: normal;
-  font-weight: bold;
-  font-size: 15px;
-  line-height: 18px;
-  text-transform: uppercase;
-  color: #ffffff;
-}
-
-.overlay {
-}
-
-.logo {
-}
 
 /* MENU */
 .menu-nav {
@@ -164,6 +139,7 @@ button {
 
   color: #00559d;
 }
+
 .main-hero-img {
 }
 .block {
@@ -262,11 +238,29 @@ button {
 .map {
   position: relative;
   min-height: 350px;
-  padding: 40px 0 133px;
+
+}
+.map-container{
+  position: relative;
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 40px ;
+  padding-bottom: 133px;
+  background-image: url("./image/map.png");
 }
 
+.map-container::before{
+ position: absolute;
+ right: 0;
+ bottom: 0;
+ content: '';
+ width: 118px;
+ height: 118px;
+ background-image: url("./image/marker.svg");
+}
 .map .container {
- 
+  
 }
 
 .map-wrapper {
