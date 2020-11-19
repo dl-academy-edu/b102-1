@@ -9,7 +9,8 @@
   <link rel="stylesheet" href="./style.css">
   <link rel="stylesheet" href="./contacts.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Overpass&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Overpass&display=swap"
+    rel="stylesheet">
 </head>
 
 <body class="overlay">
@@ -27,8 +28,13 @@
     <a class="header-phone" href="tel:7194319698">719-431-9698</a>
     <a class="header-link-contact btn" href="/contact">Contact Us</a>
   </header>
-
-
+  <div class="container">
+    <ul class="breadcrumbs">
+      <li class="breadcrumbs__item"><a href="http://">Home</a></li>
+      <li class="breadcrumbs__item"><a href="http://">Forms</a></li>
+      <li class="breadcrumbs__item active"><a>Contact</a></li>
+    </ul>
+  </div>
   <section class="contact-form container">
     <form action="" class="main-form">
       <div class="main-form__inner-wr">
@@ -77,12 +83,12 @@
 
       </fieldset>
 
-        <label class="main-form__message">
-          Message
-          <textarea name="" id="" class="input"></textarea>
-        </label>
-        <button class="btn">SUBMIT</button>
-      
+      <label class="main-form__message">
+        Message
+        <textarea name="" id="" class="input"></textarea>
+      </label>
+      <button class="btn">SUBMIT</button>
+
 
 
     </form>
@@ -90,11 +96,15 @@
   </section>
   <section class="map">
     <div class="container">
-      <div class="map-wrapper">
-        <h2 class="map-title">Chem-Dry</h2>
-        <p class="map-desc">9420 Cedar CT, Thornton, CO 80229</p>
-        <a class="map-phone" href="tel:7206059399 ">(720) 605-9399 </a>
-        <a class="btn btn-purple" href="">Learn more</a>
+      <div class="map-container">
+        <div class="container">
+          <div class="map-wrapper">
+            <h2 class="map-title">Chem-Dry</h2>
+            <p class="map-desc">9420 Cedar CT, Thornton, CO 80229</p>
+            <a class="map-phone" href="tel:7206059399 ">(720) 605-9399 </a>
+            <a class="btn btn-purple" href="">Learn more</a>
+          </div>
+        </div>
       </div>
     </div>
     <div id="map"></div>
@@ -158,13 +168,11 @@
     <input id="address" type="textbox" value="Sydney, NSW" />
     <input id="submit" type="button" value="Geocode" />
   </div>
-  
+
 
 
   <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-  <script
-    src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap&libraries=&v=weekly"
-  defer></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap&libraries=&v=weekly" defer></script>
   <script src="./script.js"></script>
 
 </body>

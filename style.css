@@ -1,4 +1,8 @@
-@import './header.css';
+@import "./header.css";
+@import "./forms.css";
+@import "./breadcrumbs.css";
+
+
 
 html {
   box-sizing: border-box;
@@ -25,8 +29,6 @@ body {
   white-space: nowrap;
 }
 
-
-
 ul {
   list-style: none;
   padding: 0;
@@ -37,9 +39,6 @@ h2 {
   margin: 0;
   padding: 0;
 }
-
-
-
 
 .container {
   max-width: 1260px;
@@ -70,21 +69,34 @@ button {
   text-transform: uppercase;
   color: #ffffff;
   background: #008752;
-  transition: opacity 0.2s;
+  transition: background-color 0.3s;
   cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #26cd8b;
+}
+
+.btn:active {
+  background-color: #005232;
+}
+
+.btn:focus {
+  outline: 2px solid tomato;
 }
 
 .btn-purple {
   background: #95459a;
 }
+.btn-purple:hover {
+  background-color: #d665dd;
+}
 
-.btn:hover {
-  opacity: 0.7;
+.btn-purple:active {
+  background-color: #722a77;
 }
 
 /* HEADER */
-
-
 
 /* MENU */
 .menu-nav {
@@ -129,6 +141,20 @@ button {
   line-height: 29px;
   background: #95459a;
 }
+.main-hero-btn:hover {
+  background-color: #d665dd;
+}
+
+.main-hero-btn:active {
+  background-color: #722a77;
+}
+
+/* .main-hero-btn:focus {
+  outline: 2px solid tomato;
+} */
+
+.main-hero-btn {
+}
 .main-hero-title {
   padding-top: 143px;
   margin-bottom: 50px;
@@ -165,6 +191,7 @@ button {
 /* SERVICES_LIST */
 .services-list {
   display: flex;
+  flex-wrap: wrap;
   margin: 0 -10px;
 }
 .services-item {
@@ -220,6 +247,11 @@ button {
 .service-dry-link {
 }
 .service-dry-img {
+  object-fit: cover;
+  width: 580px;
+  height: 430px;
+  box-shadow: 110px 99px 0 0 #008752;
+  margin-bottom: 99px;
 }
 
 /*  PARTNER  */
@@ -238,29 +270,29 @@ button {
 .map {
   position: relative;
   min-height: 350px;
-
 }
-.map-container{
+.map-container {
   position: relative;
   max-width: 1400px;
   width: 100%;
   margin: 0 auto;
-  padding-top: 40px ;
+  padding-top: 40px;
   padding-bottom: 133px;
-  background-image: url("./image/map.png");
+  background-image: url("./image/map.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.map-container::before{
- position: absolute;
- right: 0;
- bottom: 0;
- content: '';
- width: 118px;
- height: 118px;
- background-image: url("./image/marker.svg");
+.map-container::before {
+  position: absolute;
+  left: 50%;
+  top: 200px;
+  content: "";
+  width: 118px;
+  height: 118px;
+  background-image: url("./image/marker.svg");
 }
 .map .container {
-  
 }
 
 .map-wrapper {
@@ -312,6 +344,16 @@ button {
 }
 .footer-item {
   margin-left: 16px;
+}
+
+.footer-item path {
+  transition: fill 0.2s;
+}
+.footer-item:hover path {
+  fill: #60a7e3;
+}
+.footer-item:active path {
+  fill: #17354f;
 }
 
 /* POPUP */
