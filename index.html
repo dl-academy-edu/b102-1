@@ -207,26 +207,27 @@
       <div class="main-form__inner-wr">
         <label class="main-form__label-name">
           Name
-          <input type="text" class="main-form__input-name input">
+          <input name="name" id="name" value="123131" type="text" class="main-form__input-name input">
         </label>
 
         <label class="main-form__label-phone">
           Phone
-          <input type="tel" class="main-form__input-phone input">
+          <input name="phone" id="phone" type="tel" class="main-form__input-phone input">
         </label>
 
       </div>
       <label class="main-form__label-email">
         E-mail
-        <input type="email" class="main-form__input-email input">
+        <input name="email" id="email" type="email" class="main-form__input-email input">
       </label>
 
       <label class="main-form__message">
         Message
-        <textarea name="" id="" class="input"></textarea>
+        <textarea name="message" id="message" class="input"></textarea>
       </label>
-      <button class="btn">SUBMIT</button>
-      <button class="btn-close"><span class="visuallyhidden">close</span></button>
+      <button type="submit" class="btn">SUBMIT</button>
+      <!-- <button type="reset" class="btn">Reset</button> -->
+      <button type="button" class="btn-close"><span class="visuallyhidden">close</span></button>
 
     </form>
   </div>
