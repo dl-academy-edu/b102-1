@@ -2,19 +2,19 @@ var body = document.querySelector('body');
 var buttonMenu = document.querySelector('.main-hero-btn');
 var buttonClose = document.querySelector('.btn-close');
 var popupWrapper = document.querySelector('.popup-wrapper');
-var form = document.querySelector('.main-form');
+var form = document.querySelector('.main-form2');
 var buttonForTest = document.querySelector('.header-link-contact');
 var img = document.querySelector('.service-dry-img');
 
 function saveDate(date) {
   localStorage.setItem('date', JSON.stringify(date))
 }
-fetch('https://dog.ceo/api/breeds/image/random')
-  .then((res) => res.json())
-  .then(res => {
-    console.log(res)
-    img.src = res.message
-  })
+// fetch('https://dog.ceo/api/breeds/image/random')
+//   .then((res) => res.json())
+//   .then(res => {
+//     console.log(res)
+//     img.src = res.message
+//   })
 
 function loadDate() {
   if (localStorage.getItem('date')) {
@@ -24,35 +24,45 @@ function loadDate() {
     })
   }
 }
-loadDate();
+// loadDate();
+if (form) {
+  form.addEventListener('submit', function (event) {
+    event.preventDefault();
+    // console.log(form)
+    var formData = {}
 
-form.addEventListener('submit', function (event) {
-  event.preventDefault();
-  // console.log(form)
-  var formData = {}
-
-  form.querySelectorAll('input').forEach((it) => {
-    formData[it.name] = it.value
-    // console.log(it.name, it.value)
-    // formData.append(it.name, it.value)
+    form.querySelectorAll('input').forEach((it) => {
+      formData[it.name] = it.value
+      // console.log(it.name, it.value)
+      // formData.append(it.name, it.value)
+    })
+    var textarea = form.querySelector('textarea');
+    formData[textarea.name] = textarea.value
+    console.log(formData);
+    saveDate(formData)
   })
-  var textarea = form.querySelector('textarea');
-  formData[textarea.name] = textarea.value
-  console.log(formData);
-  saveDate(formData)
-})
+
+
+  form.addEventListener('reset', function (event) {
+    console.log(event)
+  })
+
+}
 
 
 
 
-buttonForTest.addEventListener('click', function (event) {
-  event.preventDefault();
-  if (!this.classList.contains('btn-purple')) {
-    this.classList.add('btn-purple')
-  } else {
-    this.classList.remove('btn-purple')
-  }
-})
+if (buttonForTest) {
+  buttonForTest.addEventListener('click', function (event) {
+    event.preventDefault();
+    if (!this.classList.contains('btn-purple')) {
+      this.classList.add('btn-purple')
+    } else {
+      this.classList.remove('btn-purple')
+    }
+  })
+}
+
 
 
 var openPopup = function (event) {
@@ -67,16 +77,14 @@ function closePopup(event) {
 }
 
 window.addEventListener('keydown', closePopup)
+if (popupWrapper) {
+  popupWrapper.addEventListener('click', closePopup)
+  buttonClose.addEventListener('click', closePopup)
+  buttonMenu.addEventListener('click', openPopup)
+}
 
-popupWrapper.addEventListener('click', closePopup)
-buttonClose.addEventListener('click', closePopup)
-buttonMenu.addEventListener('click', openPopup)
 
 
-
-form.addEventListener('reset', function (event) {
-  console.log(event)
-})
 
 
 
